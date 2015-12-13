@@ -7,10 +7,10 @@ namespace Homework2
 {
     abstract class Component
     {
-        public Component(string name)
-        {
-            Name = name;
-        }
+        //public Component(string name)
+        //{
+        //    Name = name;
+        //}
 
         public string Name { get; set; }
 

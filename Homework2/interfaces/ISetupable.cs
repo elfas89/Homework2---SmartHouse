@@ -5,7 +5,13 @@ using System.Text;
 
 namespace Homework2
 {
-    public enum RadioChannels
+    public interface ISetupable
     {
+        int Temperature
+        {
+            get;
+            set;
+        }
+
     }
 }

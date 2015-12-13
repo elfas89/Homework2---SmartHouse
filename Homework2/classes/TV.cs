@@ -8,7 +8,7 @@ namespace Homework2
     internal class TV : Component, IPowerable
     {
         public TV(string name)
-            : base(name)
+           // : base(name)
         {
             Name = name;
             State = false;

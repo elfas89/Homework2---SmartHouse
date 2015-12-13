@@ -41,21 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classes\Boiler.cs" />
     <Compile Include="classes\Component.cs" />
     <Compile Include="classes\Fridge.cs" />
-    <Compile Include="enums\FridgeModes.cs" />
-    <Compile Include="classes\GasOn.cs" />
-    <Compile Include="interfaces\IGasable.cs" />
+    <Compile Include="enums etc\FridgeModes.cs" />
+    <Compile Include="interfaces\ISetupable.cs" />
     <Compile Include="interfaces\IOpenable.cs" />
     <Compile Include="interfaces\IPowerable.cs" />
     <Compile Include="classes\MediaCenter.cs" />
     <Compile Include="classes\Oven.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="enums\RadioChannels.cs" />
     <Compile Include="classes\Stove.cs" />
     <Compile Include="classes\TV.cs" />
+    <Compile Include="enums etc\RadioChannels.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

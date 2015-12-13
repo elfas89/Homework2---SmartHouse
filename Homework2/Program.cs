@@ -16,15 +16,22 @@ namespace Homework2
             ComponentList.Add("mc1", new MediaCenter("Aiwa"));
             ComponentList.Add("fr1", new Fridge("LG fridge"));
 
+            Console.WriteLine(ComponentList.ElementAt(1).Value.Info());
+
+
+
             //TV tv = new TV("Sony TVset");
             //tv.PowerOn();
             //tv.Channel = 101;
             //Console.WriteLine(tv.Info());
 
-            //MediaCenter aiwa = new MediaCenter("Aiwa");
-            //aiwa.NextChannel();
-            //aiwa.PowerOn();
-            //Console.WriteLine(aiwa.Info());
+            MediaCenter aiwa = new MediaCenter("Aiwa");
+            aiwa.NextChannel();
+            aiwa.PowerOn();
+            Console.WriteLine(aiwa.Info());
+            aiwa.AddChannel(101.8, "popStation");
+            aiwa.AddChannel(89.3, "rockStation");
+            aiwa.ListChannel();
 
             //Fridge fr = new Fridge("LG fridge");
             //fr.Open();
@@ -34,6 +41,8 @@ namespace Homework2
             {
                 Console.WriteLine(c.Value.Info());
             }
+
+
 
 
 

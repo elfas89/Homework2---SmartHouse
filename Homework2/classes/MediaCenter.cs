@@ -16,6 +16,7 @@ namespace Homework2
         }
 
         private double channel;
+        private int volume;
 
         public new double Channel
         {
@@ -24,6 +25,22 @@ namespace Homework2
                 return channel;
             }
         }
+
+        public int Volume
+        {
+            get
+            {
+                return volume;
+            }
+            set
+            {
+                if (value >= 0 && value <= 100)
+                {
+                    volume = value;
+                }
+            }
+        }
+
 
         public override void NextChannel()
         {
@@ -49,10 +66,28 @@ namespace Homework2
             }
         }
 
-        //public void SetVolume();
-        //public void SearchChannel();
-        //public void SetEqualizer();
-        //public PlugInExternalDevice();
+
+        public void SetVolume(int volume)
+        {
+            Volume = volume;
+        }
+
+
+        List<Radio> radios = new List<Radio>();
+
+        public void AddChannel(double channel, string name)
+        {
+            radios.Add(new Radio { Channel = channel, Name = name });
+        }
+
+        public void ListChannel()
+        {
+            var stations = from r in radios orderby r.Channel select r.Name;
+            foreach (string s in stations)
+            {
+                Console.WriteLine(s);
+            }
+        }
 
 
 
@@ -68,7 +103,7 @@ namespace Homework2
                 state = "не работает";
             }
 
-            return "Медиацентр: " + Name + ", состояние: " + state + ", канал: " + channel;
+            return "Медиацентр: " + Name + ", состояние: " + state + ", канал: " + channel + ", громкость: " + volume;
         }
 
     }

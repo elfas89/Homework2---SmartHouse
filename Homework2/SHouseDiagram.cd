@@ -36,20 +36,11 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>classes\Stove.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="Homework2.Boiler">
-    <Position X="10" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
-      <FileName>classes\Boiler.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Homework2.Oven">
-    <Position X="8" Y="4.75" Width="1.5" />
+    <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAEAIAAAAAAAAAAAAAABAAAAAAQAAACEAAA=</HashCode>
       <FileName>classes\Oven.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -61,11 +52,11 @@
       <FileName>interfaces\IPowerable.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Homework2.IGasable">
+  <Interface Name="Homework2.ISetupable">
     <Position X="10" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>interfaces\IGasable.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>interfaces\ISetupable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Homework2.IOpenable">
@@ -79,22 +70,8 @@
     <Position X="6" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAgAA=</HashCode>
-      <FileName>enums\FridgeModes.cs</FileName>
+      <FileName>enums etc\FridgeModes.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Homework2.RadioChannels">
-    <Position X="6" Y="7.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>enums\RadioChannels.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Delegate Name="Homework2.GasOn">
-    <Position X="10" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>classes\GasOn.cs</FileName>
-    </TypeIdentifier>
-  </Delegate>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

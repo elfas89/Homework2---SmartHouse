@@ -11,7 +11,7 @@ namespace Homework2
         private bool doorOpened;
 
         public Fridge (string name) 
-            : base(name)
+          //  : base(name)
         {
             Name = name;
             this.mode = FridgeModes.normal;

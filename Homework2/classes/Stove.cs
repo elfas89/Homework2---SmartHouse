@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Homework2
 {
-    internal class Stove : Component, IGasable
+    internal class Stove : Component
     {
         public Stove(string name)
-            : base(name)
+          //  : base(name)
         {
             Name = name;
             State = false;

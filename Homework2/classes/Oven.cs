@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Homework2
 {
-    internal class Oven : Stove, IOpenable
+    internal class Oven : Stove, IOpenable, ISetupable
     {
         public Oven(string name)
             : base(name)
@@ -14,7 +14,28 @@ namespace Homework2
             State = false;
         }
 
+        private int temperature;
+        private int minTemper = 0;
+        private int maxTemper = 96;
+
+        public int Temperature
+        {
+            get
+            {
+                return temperature;
+            }
+            set
+            {
+                if (value >= minTemper && value <= maxTemper)
+                {
+                    temperature = value;
+                }
+            }
+        }
+
         private bool doorOpened;
+
+
 
         public void Open()
         {
