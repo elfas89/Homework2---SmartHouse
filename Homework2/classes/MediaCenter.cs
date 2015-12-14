@@ -75,7 +75,7 @@ namespace Homework2
         }
 
 
-        public override string Info()
+        public override string Info() 
         {
             string state;
             if (State)

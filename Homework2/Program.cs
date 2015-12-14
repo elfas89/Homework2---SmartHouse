@@ -10,46 +10,17 @@ namespace Homework2
     {
         static void Main(string[] args)
         {
-            //TV tv = new TV("Sony TVset");
-            //tv.PowerOn();
-            //tv.Channel = 101;
-            //Console.WriteLine(tv.Info());
-
-            //MediaCenter aiwa = new MediaCenter("Aiwa");
-            //aiwa.NextChannel();
-            //aiwa.PowerOn();
-            //Console.WriteLine(aiwa.Info());
-            //aiwa.AddChannel(101.8, "popStation");
-            //aiwa.AddChannel(89.3, "rockStation");
-            //aiwa.ListChannel();
-
-            //Fridge fr = new Fridge("LG fridge");
-            //fr.Open();
-            //Console.WriteLine(fr.Info());
-
-
             IDictionary<string, Component> ComponentList = new Dictionary<string, Component>();
 
             ComponentList.Add("Sony", new TV("Sony"));
             ComponentList.Add("Aiwa", new MediaCenter("Aiwa"));
             ComponentList.Add("LG", new Fridge("LG"));
 
-            //Console.WriteLine(ComponentList.ElementAt(0).Value.Info());
-
-            //foreach (KeyValuePair<string, Component> c in ComponentList)
-            //{
-            //    Console.WriteLine(c.Value.Info());
-            //}
-
-
-
-
             while (true)
             {
                 Console.Clear();
                 foreach (var c in ComponentList)
                 {
-                    //Console.WriteLine("Название: " + c.Key + ", " + c.Value.Info());
                     Console.WriteLine(c.Value.Info());
 
                 }
@@ -298,88 +269,8 @@ namespace Homework2
                     Help();
                 }
 
-
-
-                    //if (commands.Length == 3)
-                    //{
-                    //    if (ComponentList.ContainsKey(commands[1]))
-                    //    {
-                    //        switch (commands[0].ToLower())
-                    //        {
-                    //            case "setvolume":
-                    //                if (ComponentList[commands[1]] is MediaCenter)
-                    //                {
-                    //                    int volume;
-                    //                        if(Int32.TryParse(commands[2], out volume)) 
-                    //                        {
-                    //                            ((MediaCenter)ComponentList[commands[1]]).SetVolume(volume);
-                    //                        }
-                    //                        else
-                    //                        {
-                    //                            Console.WriteLine("Недопустимая громкость для устройства " + commands[1]);
-                    //                        }
-                                        
-                    //                }
-                    //                else
-                    //                {
-                    //                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
-                    //                    Help();
-                    //                }
-                    //                break;
-                    //            case "settemper":
-                    //                if (ComponentList[commands[1]] is Oven)
-                    //                {
-                    //                    int temper;
-                    //                        if(Int32.TryParse(commands[2], out temper)) 
-                    //                        {
-                    //                            ((Oven)ComponentList[commands[1]]).SetTemper(temper);
-                    //                        }
-                    //                        else
-                    //                        {
-                    //                            Console.WriteLine("Недопустимая температура для устройства " + commands[1]);
-                    //                        }
-                                        
-                    //                }
-                    //                else
-                    //                {
-                    //                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
-                    //                    Help();
-                    //                }
-                    //                break;
-                    //            default:
-                    //                Help();
-                    //                break;
-                    //        }
-
-                    //        continue;
-                    //    }
-                    //    else
-                    //    {
-                    //        Console.WriteLine("Устройства с таким именем не существует");
-                    //        Console.WriteLine("Нажмите любую клавишу для продолжения");
-                    //        Console.ReadLine();
-                    //        continue;
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    Help();
-                    //    continue;
-                    //}
-
-
-
-
-
             }
-
-
-
-
-
-
         }
-
 
 
         private static void Help()
