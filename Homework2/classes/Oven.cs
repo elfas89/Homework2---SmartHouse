@@ -47,6 +47,11 @@ namespace Homework2
             doorOpened = false;
         }
 
+        public void SetTemper(int temper)
+        {
+            Temperature = temper;
+        }
+
         public override string Info()
         {
             string door;

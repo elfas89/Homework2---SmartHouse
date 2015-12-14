@@ -15,24 +15,11 @@ namespace Homework2
         }
 
         private int channel;
-        private string message;
-
         public int Channel
         {
             get
             {
                 return channel;
-            }
-            set
-            {
-                if (value >= 0 && value <= 99 && State)
-                {
-                    channel = value;
-                }
-                else
-                {
-                    message = "Телевизор не включен / Канал задан неверно";
-                }
             }
         }
 
@@ -56,6 +43,7 @@ namespace Homework2
             {
                 channel = 0;
             }
+            State = true;
         }
 
         public virtual void PrevChannel()
@@ -68,7 +56,7 @@ namespace Homework2
             {
                 channel = 99;
             }
-
+            State = true;
         }
 
         public override string Info()

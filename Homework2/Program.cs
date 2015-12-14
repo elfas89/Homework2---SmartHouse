@@ -69,9 +69,10 @@ namespace Homework2
                     continue;
                 }
 
-                if (commands[0].ToLower() == "add")
+
+                if (commands.Length == 3)
                 {
-                    if (commands.Length == 3)
+                    if (commands[0].ToLower() == "add")
                     {
                         if (!ComponentList.ContainsKey(commands[2]))
                         {
@@ -107,9 +108,64 @@ namespace Homework2
                             continue;
                         }
                     }
+
+
+                    if (ComponentList.ContainsKey(commands[1]))
+                    {
+                        switch (commands[0].ToLower())
+                        {
+                            case "setvolume":
+                                if (ComponentList[commands[1]] is MediaCenter)
+                                {
+                                    int volume;
+                                    if (Int32.TryParse(commands[2], out volume))
+                                    {
+                                        ((MediaCenter)ComponentList[commands[1]]).SetVolume(volume);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Недопустимая громкость для устройства " + commands[1]);
+                                    }
+
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                                    Help();
+                                }
+                                break;
+                            case "settemper":
+                                if (ComponentList[commands[1]] is Oven)
+                                {
+                                    int temper;
+                                    if (Int32.TryParse(commands[2], out temper))
+                                    {
+                                        ((Oven)ComponentList[commands[1]]).SetTemper(temper);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Недопустимая температура для устройства " + commands[1]);
+                                    }
+
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                                    Help();
+                                }
+                                break;
+                            default:
+                                Help();
+                                break;
+                        }
+
+                        continue;
+                    }
                     else
                     {
-                        Help();
+                        Console.WriteLine("Устройства с таким именем не существует");
+                        Console.WriteLine("Нажмите любую клавишу для продолжения");
+                        Console.ReadLine();
                         continue;
                     }
                 }
@@ -171,23 +227,148 @@ namespace Homework2
                                 }
                                 break;
 
+                            case "normalmode":
+                                if (ComponentList[commands[1]] is Fridge)
+                                {
+                                    ((Fridge)ComponentList[commands[1]]).Normal();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                                    Help();
+                                }
+                                break;
 
+                            case "northmode":
+                                if (ComponentList[commands[1]] is Fridge)
+                                {
+                                    ((Fridge)ComponentList[commands[1]]).North();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                                    Help();
+                                }
+                                break;
 
+                            case "southmode":
+                                if (ComponentList[commands[1]] is Fridge)
+                                {
+                                    ((Fridge)ComponentList[commands[1]]).South();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                                    Help();
+                                }
+                                break;
 
+                            case "nextchannel":
+                                if (ComponentList[commands[1]] is TV)
+                                {
+                                    ((TV)ComponentList[commands[1]]).NextChannel();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                                    Help();
+                                }
+                                break;
 
-
+                            case "prevchannel":
+                                if (ComponentList[commands[1]] is TV)
+                                {
+                                    ((TV)ComponentList[commands[1]]).PrevChannel();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                                    Help();
+                                }
+                                break;
 
                             default:
                                 Help();
                                 break;
                         }
 
-
                 }
                 else
                 {
                     Help();
                 }
+
+
+
+                    //if (commands.Length == 3)
+                    //{
+                    //    if (ComponentList.ContainsKey(commands[1]))
+                    //    {
+                    //        switch (commands[0].ToLower())
+                    //        {
+                    //            case "setvolume":
+                    //                if (ComponentList[commands[1]] is MediaCenter)
+                    //                {
+                    //                    int volume;
+                    //                        if(Int32.TryParse(commands[2], out volume)) 
+                    //                        {
+                    //                            ((MediaCenter)ComponentList[commands[1]]).SetVolume(volume);
+                    //                        }
+                    //                        else
+                    //                        {
+                    //                            Console.WriteLine("Недопустимая громкость для устройства " + commands[1]);
+                    //                        }
+                                        
+                    //                }
+                    //                else
+                    //                {
+                    //                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                    //                    Help();
+                    //                }
+                    //                break;
+                    //            case "settemper":
+                    //                if (ComponentList[commands[1]] is Oven)
+                    //                {
+                    //                    int temper;
+                    //                        if(Int32.TryParse(commands[2], out temper)) 
+                    //                        {
+                    //                            ((Oven)ComponentList[commands[1]]).SetTemper(temper);
+                    //                        }
+                    //                        else
+                    //                        {
+                    //                            Console.WriteLine("Недопустимая температура для устройства " + commands[1]);
+                    //                        }
+                                        
+                    //                }
+                    //                else
+                    //                {
+                    //                    Console.WriteLine("Недопустимая команда для устройства " + commands[1]);
+                    //                    Help();
+                    //                }
+                    //                break;
+                    //            default:
+                    //                Help();
+                    //                break;
+                    //        }
+
+                    //        continue;
+                    //    }
+                    //    else
+                    //    {
+                    //        Console.WriteLine("Устройства с таким именем не существует");
+                    //        Console.WriteLine("Нажмите любую клавишу для продолжения");
+                    //        Console.ReadLine();
+                    //        continue;
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    Help();
+                    //    continue;
+                    //}
+
+
+
 
 
             }
@@ -212,18 +393,15 @@ namespace Homework2
             Console.WriteLine("\topen (имя устройства)");
             Console.WriteLine("\tclose (имя устройства)");
 
-            //normalmode
-            //northmode
-            //southmode
-            
-            //nextchannel
-            //prevchannel
+            Console.WriteLine("\tnormalmode (имя устройства)");
+            Console.WriteLine("\tnorthmode (имя устройства)");
+            Console.WriteLine("\tsouthmode (имя устройства)");
 
-            //listchannel
+            Console.WriteLine("\tnextchannel (имя устройства)");
+            Console.WriteLine("\tprevchannel (имя устройства)");
 
-            //setvolume //int
-            //settemper
-
+            Console.WriteLine("\tsetvolume (имя устройства) (громкость)");
+            Console.WriteLine("\tsettemper (имя устройства) (температура)");
 
             Console.WriteLine("\texit");
             HelpDevices();

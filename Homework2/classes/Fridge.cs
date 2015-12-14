@@ -9,14 +9,16 @@ namespace Homework2
     {
         private FridgeModes mode;
         private bool doorOpened;
+        private string powerMess;
 
         public Fridge (string name) 
-          //  : base(name)
+
         {
             Name = name;
             this.mode = FridgeModes.normal;
             State = false;
             doorOpened = false;
+            powerMess = "Холодильник: " + Name + " выключен, продукты портятся!";
         }
 
         public void PowerOn()
@@ -33,7 +35,7 @@ namespace Homework2
             {
             State = false;
             mode = FridgeModes.south;
-            //powerMess = "Холодильник выключен, продукты портятся!";
+            powerMess = "Холодильник: " + Name + " выключен, продукты портятся!";
             }
         }
 
@@ -46,6 +48,45 @@ namespace Homework2
         {
             doorOpened = false;
         }
+
+
+        public void Normal()
+        {
+            if (State)
+            {
+                mode = FridgeModes.normal;
+            }
+            else
+            {
+                powerMess = "Холодильник: " + Name + " - для установки режима включите холодильник!";
+            }
+
+        }
+
+        public void North()
+        {
+            if (State)
+            {
+                mode = FridgeModes.north;
+            }
+            else
+            {
+                powerMess = "Холодильник: " + Name + " - для установки режима включите холодильник!";
+            }
+        }
+
+        public void South()
+        {
+            if (State)
+            {
+                mode = FridgeModes.south;
+            }
+            else
+            {
+                powerMess = "Холодильник: " + Name + " - для установки режима включите холодильник!";
+            }
+        }
+
 
         public override string Info()
         {
@@ -61,7 +102,7 @@ namespace Homework2
             }
             else
             {
-                return "Холодильник " + Name + " выключен, продукты портятся!";
+                return powerMess;
             }
 
             string mode;
@@ -77,8 +118,6 @@ namespace Homework2
             {
                 mode = "разморозки к лужам";
             }
-
-
 
             return "Холодильник: " + Name + ", состояние: " + state + ", режим: " + mode;
         }

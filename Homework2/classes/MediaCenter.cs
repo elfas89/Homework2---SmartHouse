@@ -44,7 +44,7 @@ namespace Homework2
 
         public override void NextChannel()
         {
-            if (channel <= 115.5)
+            if (channel < 115.8)
             {
                 channel += 0.5;
             }
@@ -52,18 +52,20 @@ namespace Homework2
             {
                 channel = 88.8;
             }
+            State = true;
         }
 
         public override void PrevChannel()
         {
-            if (channel >= 88.8)
+            if (channel > 88.8)
             {
                 channel -= 0.5;
             }
             else
             {
-                channel = 115.5;
+                channel = 115.8;
             }
+            State = true;
         }
 
 
@@ -71,24 +73,6 @@ namespace Homework2
         {
             Volume = volume;
         }
-
-
-        List<Radio> radios = new List<Radio>();
-
-        public void AddChannel(double channel, string name)
-        {
-            radios.Add(new Radio { Channel = channel, Name = name });
-        }
-
-        public void ListChannel()
-        {
-            var stations = from r in radios orderby r.Channel select r.Name;
-            foreach (string s in stations)
-            {
-                Console.WriteLine(s);
-            }
-        }
-
 
 
         public override string Info()

@@ -25,7 +25,7 @@
   <Class Name="Homework2.Fridge">
     <Position X="6" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAYAAAAAAAAAIACAABAAAAAAAAAAAAAAAAAAAECAAAA=</HashCode>
+      <HashCode>AAaAAAAAAAAAIACAABAAAAAAEAAIAAAAABAAAECAAAA=</HashCode>
       <FileName>classes\Fridge.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -40,7 +40,7 @@
   <Class Name="Homework2.Oven">
     <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAEAIAAAAAAAAAAAAAABAAAAAAQAAACEAAA=</HashCode>
+      <HashCode>AAIAAAAAAAEAIAAAAAAAAAAAAAABAAAAAAQAAECEAAA=</HashCode>
       <FileName>classes\Oven.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -67,7 +67,7 @@
     </TypeIdentifier>
   </Interface>
   <Enum Name="Homework2.FridgeModes">
-    <Position X="6" Y="6.25" Width="1.5" />
+    <Position X="6" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>enums\FridgeModes.cs</FileName>
