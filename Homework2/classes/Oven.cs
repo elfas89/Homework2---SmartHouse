@@ -47,5 +47,19 @@ namespace Homework2
             doorOpened = false;
         }
 
+        public override string Info()
+        {
+            string door;
+            if (doorOpened)
+            {
+                return "Духовка: " + Name + " - закройте дверцу духовки!";
+            }
+            else
+            {
+                door = "дверца закрыта, текущая температура " + temperature;
+            }
+
+            return "Духовка: " + Name + ", " + door;
+        }
     }
 }

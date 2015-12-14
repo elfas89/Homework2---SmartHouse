@@ -8,7 +8,6 @@ namespace Homework2
     internal class Stove : Component
     {
         public Stove(string name)
-          //  : base(name)
         {
             Name = name;
             State = false;
@@ -17,7 +16,7 @@ namespace Homework2
 
         public override string Info()
         {
-            throw new NotImplementedException();
+            return "Печь: " + Name;
         }
     }
 }

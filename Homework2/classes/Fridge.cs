@@ -61,7 +61,7 @@ namespace Homework2
             }
             else
             {
-                state = "не работает";
+                return "Холодильник " + Name + " выключен, продукты портятся!";
             }
 
             string mode;
@@ -77,7 +77,6 @@ namespace Homework2
             {
                 mode = "разморозки к лужам";
             }
-
 
 
 
