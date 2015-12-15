@@ -7,12 +7,12 @@ namespace Homework2
 {
     internal class MediaCenter : TV
     {
-        public MediaCenter(string name)
+        public MediaCenter(string name, double channel)
             : base(name)
         {
             Name = name;
             State = false;
-            channel = 88.8;
+            this.channel = channel;
         }
 
         private double channel;

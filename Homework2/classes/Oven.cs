@@ -5,18 +5,20 @@ using System.Text;
 
 namespace Homework2
 {
-    internal class Oven : Stove, IOpenable, ISetupable
+    internal class Oven : Stove, IOpenable
     {
-        public Oven(string name)
+        public Oven(string name, int mintemp, int maxtemp)
             : base(name)
         {
             Name = name;
             State = false;
+            minTemper = mintemp;
+            maxTemper = maxtemp;
         }
 
         private int temperature;
-        private int minTemper = 0;
-        private int maxTemper = 96;
+        private int minTemper;
+        private int maxTemper;
 
         public int Temperature
         {

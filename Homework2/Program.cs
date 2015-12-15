@@ -13,7 +13,7 @@ namespace Homework2
             IDictionary<string, Component> ComponentList = new Dictionary<string, Component>();
 
             ComponentList.Add("Sony", new TV("Sony"));
-            ComponentList.Add("Aiwa", new MediaCenter("Aiwa"));
+            ComponentList.Add("Aiwa", new MediaCenter("Aiwa", 88.8));
             ComponentList.Add("LG", new Fridge("LG"));
 
             while (true)
@@ -59,10 +59,10 @@ namespace Homework2
                                     ComponentList.Add(commands[2], new Stove(commands[2]));
                                     break;
                                 case "oven":
-                                    ComponentList.Add(commands[2], new Oven(commands[2]));
+                                    ComponentList.Add(commands[2], new Oven(commands[2], 0, 96));
                                     break;
                                 case "mediacenter":
-                                    ComponentList.Add(commands[2], new MediaCenter(commands[2]));
+                                    ComponentList.Add(commands[2], new MediaCenter(commands[2], 88.8));
                                     break;
                                 default:
                                     Help();

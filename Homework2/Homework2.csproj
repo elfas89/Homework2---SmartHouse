@@ -43,8 +43,8 @@
   <ItemGroup>
     <Compile Include="classes\Component.cs" />
     <Compile Include="classes\Fridge.cs" />
+    <Compile Include="classes\OvenTemper.cs" />
     <Compile Include="enums\FridgeModes.cs" />
-    <Compile Include="interfaces\ISetupable.cs" />
     <Compile Include="interfaces\IOpenable.cs" />
     <Compile Include="interfaces\IPowerable.cs" />
     <Compile Include="classes\MediaCenter.cs" />

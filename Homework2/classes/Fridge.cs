@@ -16,8 +16,6 @@ namespace Homework2
         {
             Name = name;
             this.mode = FridgeModes.normal;
-            State = false;
-            doorOpened = false;
             powerMess = "Холодильник: " + Name + " выключен, продукты портятся!";
         }
 

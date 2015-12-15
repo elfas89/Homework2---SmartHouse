@@ -10,7 +10,7 @@
   <Class Name="Homework2.TV">
     <Position X="4" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQQAAAAgAAAAICAAABAAAAAAAAAAAAAAAAAAAEAAACA=</HashCode>
+      <HashCode>AQQAAAAgAAAAICAAABAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>classes\TV.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -18,7 +18,7 @@
   <Class Name="Homework2.MediaCenter">
     <Position X="4" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAgAAAAICAAAAEAAEAAAAAAAACAAAIgAEACAAA=</HashCode>
+      <HashCode>AQAAAAAgAAAAICAAAAAAAAAAAAAAAACAAAIAAEACAAA=</HashCode>
       <FileName>classes\MediaCenter.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -40,7 +40,7 @@
   <Class Name="Homework2.Oven">
     <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAEAIAAAAAAAAAAAAAABAAAAAAQAAECEAAA=</HashCode>
+      <HashCode>AAIAAAAAAAEAIAAAAAAAAAAAAAABAAAAAAQAAECEBAA=</HashCode>
       <FileName>classes\Oven.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -50,13 +50,6 @@
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>interfaces\IPowerable.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="Homework2.ISetupable">
-    <Position X="10" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
-      <FileName>interfaces\ISetupable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Homework2.IOpenable">
