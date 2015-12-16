@@ -9,14 +9,12 @@ namespace Homework2
     {
         private FridgeModes mode;
         private bool doorOpened;
-        //private string powerMess;
 
         public Fridge (string name) 
 
         {
             Name = name;
             this.mode = FridgeModes.normal;
-            //powerMess = "Холодильник: " + Name + " выключен, продукты портятся!";
         }
 
         public void PowerOn()
