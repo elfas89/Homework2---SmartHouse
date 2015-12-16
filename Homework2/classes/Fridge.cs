@@ -9,14 +9,14 @@ namespace Homework2
     {
         private FridgeModes mode;
         private bool doorOpened;
-        private string powerMess;
+        //private string powerMess;
 
         public Fridge (string name) 
 
         {
             Name = name;
             this.mode = FridgeModes.normal;
-            powerMess = "Холодильник: " + Name + " выключен, продукты портятся!";
+            //powerMess = "Холодильник: " + Name + " выключен, продукты портятся!";
         }
 
         public void PowerOn()
@@ -33,7 +33,6 @@ namespace Homework2
             {
             State = false;
             mode = FridgeModes.south;
-            powerMess = "Холодильник: " + Name + " выключен, продукты портятся!";
             }
         }
 
@@ -54,11 +53,6 @@ namespace Homework2
             {
                 mode = FridgeModes.normal;
             }
-            else
-            {
-                powerMess = "Холодильник: " + Name + " - для установки режима включите холодильник!";
-            }
-
         }
 
         public void North()
@@ -67,10 +61,6 @@ namespace Homework2
             {
                 mode = FridgeModes.north;
             }
-            else
-            {
-                powerMess = "Холодильник: " + Name + " - для установки режима включите холодильник!";
-            }
         }
 
         public void South()
@@ -78,10 +68,6 @@ namespace Homework2
             if (State)
             {
                 mode = FridgeModes.south;
-            }
-            else
-            {
-                powerMess = "Холодильник: " + Name + " - для установки режима включите холодильник!";
             }
         }
 
@@ -100,7 +86,7 @@ namespace Homework2
             }
             else
             {
-                return powerMess;
+                return "Холодильник: " + Name + " выключен, продукты портятся!";
             }
 
             string mode;

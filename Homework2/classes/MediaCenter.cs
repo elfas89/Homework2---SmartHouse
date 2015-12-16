@@ -11,7 +11,6 @@ namespace Homework2
             : base(name)
         {
             Name = name;
-            State = false;
             this.channel = channel;
         }
 
